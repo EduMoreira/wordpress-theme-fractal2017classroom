@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     height: 100%;
-    width: 60px;
+    width: 6rem;
     background: @menu-color;
     overflow: hidden;
     transition: width .5s;
@@ -17,17 +17,18 @@
         background: @blue-700;
     }
 }
-.side-menu:hover {
-    width: 300px;
-}
 .side-menu li {
-    width: 300px;
+    width: 6rem;
 }
 .side-menu li a {
     display: block;
     font-size: 0.6rem !important;
     text-decoration: none;
     color: #FFF;
-    padding: 20px 30px 22px;
+    padding: 40px 15px;
+    text-align: center;
     text-transform: uppercase;
+}
+.side-menu li:hover {
+    background: @blue-700;
 }

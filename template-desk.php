@@ -1,11 +1,11 @@
 <?php
 /*
-Template Name: Início
+Template Name: Secretaria
 */
 ?>
 <?php get_header(); ?>
 <main>
-    <section id="start"> 
-    </section>
+    <section id="desk">
+	</section>
 </main>
 <?php get_footer();	?>

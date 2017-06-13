@@ -7,18 +7,6 @@
         wp_enqueue_script('jquery', "https://code.jquery.com/jquery-2.2.0.min.js", array(), '2.2.0', true);
         wp_enqueue_script('website-js', get_template_directory_uri() . '/js/website.min.js', array('jquery'), '1.6', true);
     }
-    function register_widgets () {
-        if ( function_exists('register_sidebar') ) {
-            register_sidebar(
-                array(
-                    'name' => 'instagram',
-                    'id' => 'instagram',
-                    'before_widget' => '<div id="%1$s" class="widget %2$s">',
-                    'after_widget' => '</div>',
-                )
-            );
-        }
-    }
     /*Mask WordPress*/
     function mascara_cadastro_cliente(){
     if( is_page('cadastro-cliente') )
@@ -111,8 +99,6 @@
         add_menu_page("Theme Panel", "Theme Panel", "manage_options", "theme-panel", "theme_settings_page", null, 99);
     }
     function themeSetup() {
-        /* Register widgets */
-        add_action( 'widgets_init', 'register_widgets' );
         /* Scripts */
         add_action ('wp_enqueue_scripts', 'addDependencies');
         /* Customize admin login page */
