@@ -1,0 +1,75 @@
+.serif(){
+    font-family: "museo-slab", serif;
+}
+.heading-font(){
+    font-family: "myriad-pro", sans-serif;
+}
+*, body{
+    font-size: 1.2rem;
+    .heading-font();
+    .screen-sm({
+        font-size: 1rem;
+    });
+}
+p {
+    .serif();
+    margin: 0 0 30px;
+    > a,b,em,u,strong,i{
+        .serif();
+    }
+}
+a{
+    color: @blue-500;
+}
+a:hover{
+    color: @blue-700;
+}
+h1, h2, h3, h4, h5, h6{
+    .heading-font();
+    font-style: normal;
+    letter-spacing: 1px;
+    &.uppercase{
+        text-transform: uppercase;
+    }
+}
+h1{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+h2{
+    font-size: 1.2rem;
+}
+h3{
+    font-size: 1rem;
+}
+h4{
+    font-size: 0.8rem;
+}
+h5{
+    font-size: 0.7rem;
+}
+h6{
+    font-size: 0.6rem;
+}
+img.alignright {
+    float:right; margin:0 0 1em 1em;
+}
+img.alignleft {
+    float:left; margin:0 1em 1em 0;
+}
+img.aligncenter {
+    display: block; margin-left: auto; margin-right: auto;
+}
+a img.alignright {
+    float:right; margin:0 0 1em 1em;
+}
+a img.alignleft {
+    float:left; margin:0 1em 1em 0;
+}
+a img.aligncenter {
+    display: block; margin-left: auto; margin-right: auto;
+}
+.entry-date{
+    float:left;
+    color:@bluegrey-500;
+}

@@ -1,1 +1,1 @@
-wordpress-theme-fractal2017classroom
+# wp-theme
