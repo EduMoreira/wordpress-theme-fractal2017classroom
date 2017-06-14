@@ -7,7 +7,7 @@ Template Name: Aulas
 <main>
     <section id="classroom">
 		<div class="container">
-			<div class="row">
+			<div class="scroll">
 				<ul>
 					<?php
 					// It's a paged query
@@ -17,7 +17,6 @@ Template Name: Aulas
 						'post_type' => 'aula',
 						'post_status' => 'publish',
 						'paged' => $paged,
-                        'posts_per_page' => 15,
 						'orderby' => 'date',
 						'order' => 'DESC',
 					);
@@ -26,7 +25,17 @@ Template Name: Aulas
 					$total_posts = $the_query->found_posts;
 					// The loop
 					if( $the_query->have_posts() ): while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                        <li><div class="background" style="background-image:url(<?php the_field('cover'); ?>);"><h3 class="title"><?php the_title(); ?></h3></div></li>
+                        <li>
+							<a href="<?php the_permalink(); ?>">
+								<div class="background" style="background-image:url(<?php the_field('cover'); ?>);">
+									<div class="content--wrapper">
+										<div class="content emphasize">
+											<h3 class="title"><?php the_title(); ?></h3>
+										</div>
+									</div>
+								</div>
+							</a>
+						</li>
 					<?php endwhile; ?>
 					<?php if ($total_posts > $posts_per_page) : ?>
 					<?php endif ?>

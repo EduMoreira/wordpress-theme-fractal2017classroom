@@ -30,7 +30,6 @@
                     </div>
                     <?php the_field('video'); ?>
                     <?php the_field('content'); ?>
-                    <?php dashboard_notes(); ?>
                 </div>
                 <div class="offset-md-2 col-md-8 comments">
                     <?php comments_template( '', true ); ?>

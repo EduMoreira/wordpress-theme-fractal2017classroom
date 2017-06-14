@@ -20,7 +20,7 @@
                 background-image: url(".get_bloginfo('template_directory')."/img/logo-black.svg);
                 -webkit-background-size: auto;
                 background-size: auto;
-                background-color: #e5e5e5;
+                background-color: transparent;
                 margin: 0 0 25px;
                 width: 320px;
             }
