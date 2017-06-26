@@ -22,17 +22,33 @@
         <div class="container">
             <div>
                 <div class="offset-md-2 col-md-8 paper">
-                    <div class="<?php echo get_field('pdf_file')?'download':'hidden-md-up hidden-xs-down'; ?>">
-                        <a target="_blank" href="<?php the_field('pdf_file'); ?>">
-                            <img class="file-type" src="<?php bloginfo('template_url'); ?>/img/icons/pdf.svg">
-                            <spam class="btn btn-green">Download</spam>
-                        </a>
-                    </div>
                     <?php the_field('video'); ?>
                     <?php the_field('content'); ?>
+                    <div class="row">
+                        <?php if( have_rows('references') ): ?>
+                            <?php while( have_rows('references') ): the_row(); ?>
+                                <div class="col-12 col-md-6">
+                                    <a target="_blank" href="<?php the_sub_field('url'); ?>">
+                                        <h4 class="uppercase"><?php the_sub_field('name'); ?></h4>
+                                    </a>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                        <?php if( have_rows('files') ): ?>
+                            <?php while( have_rows('files') ): the_row(); ?>
+                                <div class="col-12 col-md-6">
+                                    <a target="_blank" href="<?php the_sub_field('file'); ?>">
+                                        <h4 class="uppercase"><?php the_sub_field('name'); ?></h4>
+                                    </a>
+                                </div>
+                            <?php endwhile; ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
                 <div class="offset-md-2 col-md-8 comments">
-                    <?php comments_template( '', true ); ?>
+                    <div class="row">
+                        <?php comments_template( '', true ); ?>
+                    </div>
                 </div>
             </div>
         </div>  

@@ -1,4 +1,5 @@
 section {
+    margin-left: 6rem;
     .clearfix();
     width: 100%;
     z-index: 0;
@@ -6,5 +7,10 @@ section {
     > div.content {
         width: 100%;
         background-color: white;
+    }
+}
+@media (max-width: @screen-sm-max) {
+   section { 
+       margin-left: 0;
     }
 }

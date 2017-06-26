@@ -1,7 +1,6 @@
 		<div id="footer">
 			<a href="<?php echo home_url(); ?>" class="logo">
-				<img src="<?php bloginfo('template_url'); ?>/img/logo-white.svg" class="white" alt="Fractal Reality Academy Logo"/>
-				<img src="<?php bloginfo('template_url'); ?>/img/logo-white.svg" class="black" alt="Fractal Reality Academy Logo"/>
+				<img src="<?php bloginfo('template_url'); ?>/img/logo-black.svg" class="black" alt="Logo Fractal Reality Academy"/>
 			</a>
 		</div>
 		<div class="about-project">

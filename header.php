@@ -48,8 +48,8 @@
 	<link rel="icon" type="image/png" href="<?php bloginfo('template_url'); ?>/img/favicons/favicon-16x16.png?v=2" sizes="16x16">
 	<link rel="manifest" href="<?php bloginfo('template_url'); ?>/manifest.json?v=2">
 	<link rel="mask-icon" href="<?php bloginfo('template_url'); ?>/img/favicons/safari-pinned-tab.svg?v=2" color="#5bbad5">
-	<meta name="apple-mobile-web-app-title" content="Teoria da Complexidade">
-	<meta name="application-name" content="Teoria da Complexidade">
+	<meta name="apple-mobile-web-app-title" content="FRACTAL 2017.1">
+	<meta name="application-name" content="FRACTAL 2017.1">
 	<meta name="msapplication-TileColor" content="#ffffff">
 	<meta name="msapplication-TileImage" content="<?php bloginfo('template_url'); ?>/img/favicons/mstile-144x144.png?v=2">
 	<meta name="theme-color" content="#000000">
@@ -61,19 +61,21 @@
 	<!--Facebook-->
     <meta property="og:title" content="<?php the_title(); ?>"/>
     <meta property="og:type" content="article" />
-    <meta property="og:site_name" content="Teoria da Complexidade"/>
+    <meta property="og:site_name" content="FRACTAL 2017.1"/>
     <meta property="og:image" content="<?php the_field('cover'); ?>"/>
 	<!--Facebook-->
 </head>
 <body>
 	<div id="header">
-	<?php
+		<?php
 			if (is_front_page()) {
 				wp_nav_menu(["theme_location"  => "home-menu", "container_class" => "side-menu non-mobile"]);
+				wp_nav_menu(["theme_location"  => "home-menu", "container_class" => "scroll-menu mobile"]);
 			} else {
 				wp_nav_menu(["theme_location"  => "inner-menu", "container_class" => "side-menu non-mobile"]);
+				wp_nav_menu(["theme_location"  => "inner-menu", "container_class" => "scroll-menu mobile"]);
 			}
-            global $post;
+			global $post;
 			$pages = get_field('page_title_and_meta_description', 'options');
 			if($pages) {
 				$found = false;
